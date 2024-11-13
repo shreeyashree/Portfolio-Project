@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="MainImg/logo.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="Project.html">Projects</a></li>                
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="text-content">
+            <h1 class="blinking-text" id="blinkingText">Welcome!</h1>
+            <p class="normal-text">Hope you like my PORTFOLIO.</p>
+        </div>
+        <img src="MainImg/me.jpg" alt="" class="right-image"> 
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const texts = ["Welcome!", "I am Shreeya", "Let's know", "Each-Other"];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % texts.length; 
+            document.getElementById("blinkingText").textContent = texts[index];
+        }, 2000); 
+    </script>
+</body>
+</html>
